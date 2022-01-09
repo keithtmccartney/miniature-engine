@@ -1,14 +1,36 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miniature-engine", "miniature-engine\miniature-engine.csproj", "{85251C7A-BCD7-444F-92B2-4AA11AF0B4C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D8CEF418-A8A7-424D-8503-5819F2C07D9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miniature-engine.Tests", "miniature-engine.Tests\miniature-engine.Tests.csproj", "{6660327C-12FA-478B-828B-40A537048887}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85251C7A-BCD7-444F-92B2-4AA11AF0B4C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85251C7A-BCD7-444F-92B2-4AA11AF0B4C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85251C7A-BCD7-444F-92B2-4AA11AF0B4C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85251C7A-BCD7-444F-92B2-4AA11AF0B4C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6660327C-12FA-478B-828B-40A537048887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6660327C-12FA-478B-828B-40A537048887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6660327C-12FA-478B-828B-40A537048887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6660327C-12FA-478B-828B-40A537048887}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6660327C-12FA-478B-828B-40A537048887} = {D8CEF418-A8A7-424D-8503-5819F2C07D9C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {537BEFEA-5D3B-4ED6-A7FC-64E7D61F5648}
 	EndGlobalSection
 EndGlobal
