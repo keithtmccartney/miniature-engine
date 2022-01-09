@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentAssertions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -112,13 +113,12 @@ namespace miniature_engine.Tests
         public void AddNegativeNumbersTest()
         {
             //Arrange
-            string numbers = "1,2,3,-4,5";
+            string numbers = "//;\n1;2;3;-4;5;-6;7;-8;9;10";
 
             //Act
-            int add = _stringCalculator.Add(numbers);
+            Action action = () => _stringCalculator.Add(numbers);
 
-            //Assert
-            Assert.Equal(add, 11);
+            action.Should().ThrowExactly<InvalidOperationException>().WithMessage("Negatives not allowed, the following were found: -4,-6,-8.");
         }
     }
 }

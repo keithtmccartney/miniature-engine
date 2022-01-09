@@ -12,6 +12,10 @@ namespace miniature_engine
         {
             int add = 0;
 
+            string exceptionMessage = "Negatives not allowed";
+
+            List<int> exceptions = new List<int>();
+
             if (string.IsNullOrEmpty(numbers))
                 return add;
 
@@ -34,16 +38,31 @@ namespace miniature_engine
             {
                 string[] numbersArray = numbers.Split(new string[] { ",", identifier, delimiter, newLine }, StringSplitOptions.None);
 
-                for (int i = 0; i < numbersArray.Length; i++)
+                foreach (string number in numbersArray)
                 {
-                    if (numbersArray[i] != "" && !numbersArray[i].StartsWith("-") && numbersArray[i].All(char.IsNumber))
-                        add = add + Convert.ToInt32(numbersArray[i]);
+                    if (number != "")
+                    {
+                        if (number.StartsWith("-"))
+                        {
+                            exceptions.Add(Convert.ToInt32(number));
+                        }
+                        else
+                        {
+                            if (number.All(char.IsNumber))
+                            {
+                                add = add + Convert.ToInt32(number);
+                            }
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+
+            if (exceptions.Count >= 1)
+                throw new InvalidOperationException(string.Format("{0}, the following were found: {1}.", exceptionMessage, string.Join<int>(",", exceptions)));
 
             return add;
         }
