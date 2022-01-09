@@ -12,6 +12,9 @@ namespace miniature_engine
         {
             int add = 0;
 
+            if (string.IsNullOrEmpty(numbers))
+                return add;
+
             try
             {
                 add = Convert.ToInt32(numbers);
