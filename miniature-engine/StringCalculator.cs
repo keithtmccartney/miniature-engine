@@ -50,7 +50,8 @@ namespace miniature_engine
                         {
                             if (number.All(char.IsNumber))
                             {
-                                add = add + Convert.ToInt32(number);
+                                if (Convert.ToInt32(number) <= 1000)
+                                    add = add + Convert.ToInt32(number);
                             }
                         }
                     }
