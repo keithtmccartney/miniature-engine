@@ -107,5 +107,18 @@ namespace miniature_engine.Tests
             //Assert
             Assert.Equal(add, 3);
         }
+
+        [Fact]
+        public void AddNegativeNumbersTest()
+        {
+            //Arrange
+            string numbers = "1,2,3,-4,5";
+
+            //Act
+            int add = _stringCalculator.Add(numbers);
+
+            //Assert
+            Assert.Equal(add, 11);
+        }
     }
 }

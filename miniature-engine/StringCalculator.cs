@@ -36,7 +36,7 @@ namespace miniature_engine
 
                 for (int i = 0; i < numbersArray.Length; i++)
                 {
-                    if (numbersArray[i] != "" && numbersArray[i].All(char.IsNumber))
+                    if (numbersArray[i] != "" && !numbersArray[i].StartsWith("-") && numbersArray[i].All(char.IsNumber))
                         add = add + Convert.ToInt32(numbersArray[i]);
                 }
             }
