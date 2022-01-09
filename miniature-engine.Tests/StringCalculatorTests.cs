@@ -18,6 +18,19 @@ namespace miniature_engine.Tests
         }
 
         [Fact]
+        public void EmptyStringTest()
+        {
+            //Arrange
+            string numbers = "";
+
+            //Act
+            int add = _stringCalculator.Add(numbers);
+
+            //Assert
+            Assert.Equal(add, 0);
+        }
+
+        [Fact]
         public void AddOneNumberTest()
         {
             //Arrange
@@ -44,16 +57,16 @@ namespace miniature_engine.Tests
         }
 
         [Fact]
-        public void EmptyStringTest()
+        public void AddUnknownAmountNumbersTest()
         {
             //Arrange
-            string numbers = "";
+            string numbers = "1,2,3,4,5";
 
             //Act
             int add = _stringCalculator.Add(numbers);
 
             //Assert
-            Assert.Equal(add, 0);
+            Assert.Equal(add, 15);
         }
     }
 }
