@@ -42,5 +42,18 @@ namespace miniature_engine.Tests
             //Assert
             Assert.Equal(add, 0);
         }
+
+        [Fact]
+        public void ConversionTest()
+        {
+            //Arrange
+            string numbers = "1,2";
+
+            //Act
+            int add = _stringCalculator.Add(numbers);
+
+            //Assert
+            Assert.NotEqual(add, 3);
+        }
     }
 }

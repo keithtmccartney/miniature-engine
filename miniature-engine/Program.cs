@@ -6,7 +6,9 @@ namespace miniature_engine
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            StringCalculator stringCalculator = new StringCalculator();
+
+            stringCalculator.Add("1,2");
         }
     }
 }
