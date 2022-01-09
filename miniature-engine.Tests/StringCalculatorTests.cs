@@ -68,5 +68,31 @@ namespace miniature_engine.Tests
             //Assert
             Assert.Equal(add, 15);
         }
+
+        [Fact]
+        public void AddNewLineCommaNumbersTest()
+        {
+            //Arrange
+            string numbers = "1\n2,3";
+
+            //Act
+            int add = _stringCalculator.Add(numbers);
+
+            //Assert
+            Assert.Equal(add, 6);
+        }
+
+        [Fact]
+        public void AddOneNumberCommaNewLineNumbersTest()
+        {
+            //Arrange
+            string numbers = "1,\n";
+
+            //Act
+            int add = _stringCalculator.Add(numbers);
+
+            //Assert
+            Assert.Equal(add, 1);
+        }
     }
 }
