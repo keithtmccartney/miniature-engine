@@ -7,11 +7,11 @@ using Xunit;
 
 namespace miniature_engine.Tests
 {
-    public class StringCalculatorTest
+    public class StringCalculatorTests
     {
         private readonly StringCalculator _stringCalculator;
 
-        public StringCalculatorTest()
+        public StringCalculatorTests()
         {
             //Arrange
             _stringCalculator = new StringCalculator();
