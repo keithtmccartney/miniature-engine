@@ -120,5 +120,18 @@ namespace miniature_engine.Tests
 
             action.Should().ThrowExactly<InvalidOperationException>().WithMessage("Negatives not allowed, the following were found: -4,-6,-8.");
         }
+
+        [Fact]
+        public void AddBiggerNumbersTest()
+        {
+            //Arrange
+            string numbers = "1,2,3,4,5,999,1000,1001,9,10";
+
+            //Act
+            int add = _stringCalculator.Add(numbers);
+
+            //Assert
+            Assert.Equal(add, 2033);
+        }
     }
 }
