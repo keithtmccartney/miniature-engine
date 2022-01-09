@@ -29,5 +29,18 @@ namespace miniature_engine.Tests
             //Assert
             Assert.Equal(add, 1);
         }
+
+        [Fact]
+        public void EmptyStringTest()
+        {
+            //Arrange
+            string numbers = "";
+
+            //Act
+            int add = _stringCalculator.Add(numbers);
+
+            //Assert
+            Assert.Equal(add, 0);
+        }
     }
 }
