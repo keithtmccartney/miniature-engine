@@ -17,7 +17,13 @@ namespace miniature_engine
 
             try
             {
-                add = Convert.ToInt32(numbers);
+                string[] numbersArray = numbers.Split(new string[] { "," }, StringSplitOptions.None);
+
+                for (int i = 0; i < numbersArray.Length; i++)
+                {
+                    if (numbersArray[i].All(char.IsNumber))
+                        add = add + Convert.ToInt32(numbersArray[i]);
+                }
             }
             catch (Exception ex)
             {
