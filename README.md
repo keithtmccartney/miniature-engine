@@ -18,7 +18,8 @@
 
 ## Tips/Run
 
-* Abc;
+* (.NET 5.0) Console App: alter the 'Program' (line "Console.WriteLine(stringCalculator.Add("//+\n1+2+3+4+5+999+1000+1001+9+10"));") and 'StringCalculator' classes in the main project;
+* (.NET 5.0) xUnit Test Project: see the 'StringCalculatorTests' class in the test project;
 
 ## Errors Experienced
 
