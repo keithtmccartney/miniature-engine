@@ -18,7 +18,7 @@ namespace miniature_engine.Tests
         }
 
         [Fact]
-        public void AddTest()
+        public void AddOneNumberTest()
         {
             //Arrange
             string numbers = "1";
@@ -28,6 +28,19 @@ namespace miniature_engine.Tests
 
             //Assert
             Assert.Equal(add, 1);
+        }
+
+        [Fact]
+        public void AddTwoNumbersTest()
+        {
+            //Arrange
+            string numbers = "1,2";
+
+            //Act
+            int add = _stringCalculator.Add(numbers);
+
+            //Assert
+            Assert.Equal(add, 3);
         }
 
         [Fact]
@@ -41,19 +54,6 @@ namespace miniature_engine.Tests
 
             //Assert
             Assert.Equal(add, 0);
-        }
-
-        [Fact]
-        public void ConversionTest()
-        {
-            //Arrange
-            string numbers = "1,2";
-
-            //Act
-            int add = _stringCalculator.Add(numbers);
-
-            //Assert
-            Assert.NotEqual(add, 3);
         }
     }
 }
