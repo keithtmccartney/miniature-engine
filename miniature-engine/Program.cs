@@ -8,7 +8,7 @@ namespace miniature_engine
         {
             StringCalculator stringCalculator = new StringCalculator();
 
-            Console.WriteLine(stringCalculator.Add("1,2\n3"));
+            Console.WriteLine(stringCalculator.Add("//;\n1;2"));
         }
     }
 }

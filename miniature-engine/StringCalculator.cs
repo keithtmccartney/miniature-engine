@@ -15,9 +15,24 @@ namespace miniature_engine
             if (string.IsNullOrEmpty(numbers))
                 return add;
 
+            string identifier = "//";
+
+            string delimiter = "";
+
+            string newLine = "\n";
+
+            if (numbers.StartsWith(identifier))
+            {
+                int before = numbers.IndexOf(identifier) + identifier.Length;
+
+                int after = numbers.IndexOf(newLine) + "".Length;
+
+                delimiter = numbers.Substring(before, after - before);
+            }
+
             try
             {
-                string[] numbersArray = numbers.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
+                string[] numbersArray = numbers.Split(new string[] { ",", identifier, delimiter, newLine }, StringSplitOptions.None);
 
                 for (int i = 0; i < numbersArray.Length; i++)
                 {

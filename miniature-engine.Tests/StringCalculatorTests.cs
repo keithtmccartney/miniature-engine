@@ -94,5 +94,18 @@ namespace miniature_engine.Tests
             //Assert
             Assert.Equal(add, 1);
         }
+
+        [Fact]
+        public void AddIdentifierDelimiterNewLineNumbersTest()
+        {
+            //Arrange
+            string numbers = "//;\n1;2";
+
+            //Act
+            int add = _stringCalculator.Add(numbers);
+
+            //Assert
+            Assert.Equal(add, 3);
+        }
     }
 }
